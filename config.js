@@ -7,4 +7,7 @@ module.exports = {
 
   // 图片地址所在的属性
   urlAttrName: 'href',
+
+  // 图片生成的文件夹路径
+  distPath: './content'
 }

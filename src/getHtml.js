@@ -8,7 +8,7 @@ const cheerio = require('cheerio')
 const {url} = require('../config')
 const {hostname, path, protocol} = URL.parse(url)
 
-// 要爬取的目标url
+// 要爬取目标的请求参数
 const requestOptions = {
   hostname,
   port: 80,
