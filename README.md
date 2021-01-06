@@ -3,35 +3,25 @@
 #### 介绍
 抓取页面中的图片存储到本地
 
-#### 软件架构
-软件架构说明
-
-
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+```
+npm install
+```
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. 项目配置
+    
+    在[config.js](./config.js)文件中配置所有参数。
+    
 
-#### 参与贡献
+1. 运行项目
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+    ```
+    npm run dev
+    ```
 
+1. 运行结果
 
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+    抓取的图片存储在当前项目下的content文件夹中。
