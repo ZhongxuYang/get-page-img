@@ -6,14 +6,19 @@ const URL = require('url')
 const {hostname, path, protocol} = URL.parse(url)
 
 
-getHTML().then($ => {
-  makeDir(distPath)
+getHTML().then(async $ => {
+  await makeDir(distPath)
 
   const items = $(targetSelector).toArray()
-  items.map((item, idx) => {
+  const allTasks = items.map((item, idx) => {
     const originSrc = $(item).attr(urlAttrName)
     const src = /^http/.test(originSrc) ? originSrc : `${protocol}//${hostname + originSrc}`
       
-    saveImg(src, idx)
+    return saveImg(src, idx)
   });
+  Promise.all(allTasks).then(() => {
+    process.exit(0)
+  }).catch(() => {
+    console.log('???');
+  })
 })

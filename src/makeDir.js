@@ -1,18 +1,19 @@
 const fs = require('fs')
 
-const makeDir = (filePath) => {
-  const existDir = fs.existsSync(filePath)
-
-  if (!existDir) {
-    console.log('该路径不存在');
-    fs.mkdir(filePath, (err) => {
+const makeDir = (path) => {
+  return new Promise((resolve, reject) => {
+    fs.mkdir(path, { recursive: true }, (err) => {
       if (err) {
-        console.log('文件夹创建错误');
+        if (err.code === 'EEXIST') {
+          resolve(`Directory ${path} already exists`);
+        } else {
+          reject(`Error creating directory ${path}: ${err}`);
+        }
       } else {
-        console.log('文件夹创建完成');
+        resolve(`Directory ${path} created successfully`);
       }
     });
-  }
+  });
 }
 
 exports.makeDir = makeDir

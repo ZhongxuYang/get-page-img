@@ -14,8 +14,11 @@ function saveImg(src, name) {
   //写入对应的文件夹中
   readStream.pipe(writeStream);
   // // 监听本次写入是否结束
-  readStream.on('end', response => {
-    writeStream.end();
+  return new Promise((resolve, reject) => {
+    readStream.on('end', response => {
+      writeStream.end();
+      resolve(1)
+    })
   })
 }
 
