@@ -6,7 +6,13 @@ const {ProgressBar} = require('./utils/progress-bar')
 // 图片存储
 function saveImg(src, index) {
   const writeStream = fs.createWriteStream(`${distPath}/${index}.jpg`);
-  const readStream = request.get(src);
+  const options = {
+    url: src,
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    }
+  }
+  const readStream = request.get(options);
 
   // 获取文件大小
   let fileSize = 0;

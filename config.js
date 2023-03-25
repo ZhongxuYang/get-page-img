@@ -10,5 +10,5 @@ module.exports = {
   urlAttrName: 'src',
 
   // 图片生成的文件夹路径
-  distPath: './content/the-reformation'
+  distPath: './content/alessandra-sanguinetti/the-adventures-of-guille-and-belinda-and-the-illusion-of-an-everlasting-summer'
 }
