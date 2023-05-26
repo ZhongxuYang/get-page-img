@@ -7,8 +7,8 @@ module.exports = {
   targetSelector: 'img',
 
   // 图片地址所在的属性
-  urlAttrName: 'src',
+  urlAttrName: 'data-src',
 
   // 图片生成的文件夹路径
-  distPath: './content/alessandra-sanguinetti/the-adventures-of-guille-and-belinda-and-the-illusion-of-an-everlasting-summer'
+  distPath: './content/仲野太贺X川岛小鸟_世界2'
 }
